@@ -1,118 +1,132 @@
 {
-    "basic_info": {
-      "description_header": "Hi",
-      "description": "👋 I'm Davina Griss. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. What you are seeing now is portfolio template from Dorota1997. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 💜",
-      "section_name": {
-        "about": "About me",
-        "projects": "Projects",
-        "skills": "Skills",
-        "experience": "Experience"
-      }
+  "basic_info": {
+    "description_header": "Hello,",
+    "description": "👋 I'm Masaaki Tanaka, Full-Stack Software Developer.  I have a Bachelor's degree in Business from Osaka city University. I recently moved to Canada. I have always been passionate about developing new skills—especially learning about new languages, cultures, and technology. Also, I'm passionate about tennis and travelling⭐  Thank you",
+    "section_name": {
+      "about": "About me",
+      "projects": "Projects",
+      "skills": "Skills",
+      "experience": "Experience"
+    }
+  },
+  "projects": [
+    {
+      "title": "HR System",
+      "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. I was in charge of architect, design, develop UI, develop backend APIs, model DB, and test code.",
+      "images": ["images/portfolio/hr-system/hr_system.jpg"],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-csharp-plain",
+          "name": "C#"
+        },
+        {
+          "class": "devicon-postgresql-plain",
+          "name": "PostgreSQL"
+        }
+      ]
     },
-    "projects": [
-      {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
-        "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      },
-      {
-        "title": "Photography",
-        "startDate": "2018",
-        "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
-        "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-react-original",
-            "name": "React"
-          },
-          {
-            "class": "devicon-javascript-plain",
-            "name": "JavaScript"
-          }
-        ]
-      },
-      {
-        "title": "3D Object Viewer",
-        "startDate": "2015",
-        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
-        "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      }
-    ],
-    "experience": [
-      {
-        "company": "DefOpenSource",
-        "title": "Front-End Developer",
-        "years": "10.2019 - present",
-        "mainTech": [
-          "Angular 8/9/10"
-        ],
-        "technologies": [
-          "REST API",
-          "RxJS",
-          "JavaScript",
-          "Bootstrap",
-          "MDBootstrap",
-          "EF Core",
-          ".NET Core",
-          "SignalR",
-          "Angular Material"
-        ]
-      },
-      {
-        "company": "Serros Solutions",
-        "title": "Intern",
-        "years": "01.2018 - 09.2019",
-        "mainTech": [
-          "Angular 7/8"
-        ],
-        "technologies": [
-          "RxJS",
-          "Django",
-          "PHP",
-          "JavaScript",
-          "DHTMLX Gantt"
-        ]
-      }
-    ]
-  }
+    {
+      "title": "Twitter Clone",
+      "description": "Personal project for study Node.js, Express, and MongoDB. User can keep their memories by uploading their comments. :)",
+      "images": [
+        "images/portfolio/twitter-clone/memory_project1.jpg",
+        "images/portfolio/twitter-clone/memory_project2.jpg"
+      ],
+      "url": "https://github.com/MasaakiTanaka/mern",
+      "technologies": [
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-nodejs-plain",
+          "name": "Node.js"
+        },
+        {
+          "class": "devicon-express-original",
+          "name": "Express"
+        },
+        {
+          "class": "devicon-mongodb-plain",
+          "name": "MongoDB"
+        }
+      ]
+    },
+    {
+      "title": "Werewolf Game Tool",
+      "description": "Personal project for playing werewolf game online with my friends. This is a realtime web application using Socket.IO. I've learned a lot!",
+      "images": [
+        "images/portfolio/werewolf/werewolf.jpg",
+        "images/portfolio/werewolf/werewolf2.jpg"
+      ],
+      "url": "https://github.com/MasaakiTanaka/werewolf_game",
+      "technologies": [
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Quest-Com, Osaka, Japan",
+      "title": "Full Stack Software Developer",
+      "years": "07.2019 - 07.2021",
+      "mainTech": [],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "webpack",
+        "Babel",
+        "C#",
+        ".NET Core",
+        "EF Core",
+        "REST API",
+        "PostgreSQL"
+      ],
+      "responsibilities": [
+        "・Architect and design HR management application using advanced development and coding techniques",
+        "・Develop user interface using HTML5, CSS3, JavaScript, React, Redux, webpack, and Babel",
+        "・Write JavaScript functions and React Component as a tech lead for frontend",
+        "・Integrate REST API into React",
+        "・Develop back-end API using C# and .NET Core",
+        "・Model and manage data from PostgreSQL Server using Entity Framework Core"
+      ]
+    },
+    {
+      "company": "Asics, Kobe, Japan",
+      "title": "Shoe Developer",
+      "years": "04.2016 - 06.2019",
+      "mainTech": [],
+      "technologies": [],
+      "responsibilities": [
+        "・Manage projects while liaising across all departments",
+        "・Determine valuation and marketing strategy with the sales team",
+        "・Collaborate on design and material choice with designers",
+        "・Coordinate construction with designer and architect using Illustrator",
+        "・Train, mentor, and support team members"
+      ]
+    }
+  ]
+}

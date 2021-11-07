@@ -47,7 +47,7 @@ class ProjectDetailsModal extends Component {
           <i className="fas fa-times fa-3x close-icon"></i>
         </span>
         <div className="col-md-12">
-          <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
+          <div className="col-md-10 mx-auto" style={{ paddingBottom: "35px" }}>
             <div className="slider-tab">
               <span
                 className="iconify slider-iconfiy"
@@ -77,7 +77,7 @@ class ProjectDetailsModal extends Component {
             </AwesomeSlider>
           </div>
           <div className="col-md-10 mx-auto">
-            <h3 style={{ padding: "5px 5px 0 5px" }}>
+            <h1 style={{ padding: "5px 5px 0 5px" }}>
               {title}
               {url ? (
                 <a
@@ -92,8 +92,8 @@ class ProjectDetailsModal extends Component {
                   ></i>
                 </a>
               ) : null}
-            </h3>
-            <p className="modal-description">{description}</p>
+            </h1>
+            <h3 className="modal-description">{description}</h3>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
             </div>

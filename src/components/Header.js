@@ -1,98 +1,52 @@
-import React, { Component } from "react";
-import Typical from "react-typical";
-import Switch from "react-switch";
+import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import { Link } from 'react-scroll'
 
-class Header extends Component {
-  titles = [];
+export default function Header() {
+    const [isNavVisible, setNavVisibility] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  constructor() {
-    super();
-    this.state = { checked: false };
-    this.onThemeSwitchChange = this.onThemeSwitchChange.bind(this);
-  }
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 700px)");
+        mediaQuery.addListener(handleMediaQueryChange);
+        handleMediaQueryChange(mediaQuery);
 
-  onThemeSwitchChange(checked) {
-    this.setState({ checked });
-    this.setTheme();
-  }
+        return () => {
+            mediaQuery.removeListener(handleMediaQueryChange);
+        };
+    }, []);
 
-  setTheme() {
-    var dataThemeAttribute = "data-theme";
-    var body = document.body;
-    var newTheme =
-      body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
-    body.setAttribute(dataThemeAttribute, newTheme);
-  }
+    const handleMediaQueryChange = mediaQuery => {
+        if (mediaQuery.matches) {
+            setIsSmallScreen(true);
+        } else {
+            setIsSmallScreen(false);
+        }
+    };
 
-  render() {
-    if (this.props.sharedData) {
-      var name = this.props.sharedData.name;
-      this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
-    }
-
-    const HeaderTitleTypeAnimation = React.memo( () => {
-      return <Typical className="title-styles" steps={this.titles} loop={50} />
-    }, (props, prevProp) => true);
+    const toggleNav = () => {
+        setNavVisibility(!isNavVisible);
+    };
 
     return (
-      <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
-        <div className="row aligner" style={{height: '100%'}}>
-          <div className="col-md-12">
-            <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
-              <h1 className="mb-0">
-                <Typical steps={[name]} wrapper="p" />
-              </h1>
-              <div className="title-container">
-                <HeaderTitleTypeAnimation />
-              </div>
-              <Switch
-                checked={this.state.checked}
-                onChange={this.onThemeSwitchChange}
-                offColor="#baaa80"
-                onColor="#353535"
-                className="react-switch mx-auto"
-                width={90}
-                height={40}
-                uncheckedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="twemoji:owl"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "20px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                checkedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="noto-v1:sun-with-face"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "10px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                id="icon-switch"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
+        <header className="Header">
+            <CSSTransition
+                in={!isSmallScreen || isNavVisible}
+                timeout={350}
+                classNames="NavAnimation"
+                unmountOnExit
+            >
+                <nav className="Nav">
+                    <Link activeClass="active" to="main" onClick={toggleNav} smooth={true} class="menu-link">Home</Link>
+                    <Link to="about" smooth={true} onClick={toggleNav} class="menu-link">About me</Link>
+                    <Link to="projects" smooth={true} onClick={toggleNav} class="menu-link">Projects</Link>
+                    <Link to="skills" smooth={true} onClick={toggleNav} class="menu-link">Skills</Link>
+                    <Link to="experience" smooth={true} onClick={toggleNav} class="menu-link">Experience</Link>
+                </nav>
+            </CSSTransition>
+            {/* <button onClick={toggleNav} className="Burger">
+                <i className='fa fa-bars'></i>
+            </button> */}
+        </header>
     );
-  }
 }
-
-export default Header;

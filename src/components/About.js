@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
+import javascriptIcon from '@iconify/icons-logos/javascript';
 import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
+import cSharp from '@iconify/icons-logos/c-sharp';
 
 class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
-      var profilepic = "images/" + this.props.sharedBasicInfo.image;
+      var profilepic1 = "images/" + this.props.sharedBasicInfo.image1;
+      var profilepic2 = "images/" + this.props.sharedBasicInfo.image2;
+      var profilepic3 = "images/" + this.props.sharedBasicInfo.image3;
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
@@ -26,26 +28,26 @@ class About extends Component {
               <div className="polaroid">
                 <span style={{ cursor: "auto" }}>
                   <img
-                    height="250px"
-                    src={profilepic}
+                    height="260px"
+                    width="220px"
+                    src={profilepic1}
                     alt="Avatar placeholder"
                   />
                   <Icon
-                    icon={angularIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                    icon={javascriptIcon}
+                    style={{ fontSize: "400%", margin: "5% 5% 0 5%" }}
                   />
                   <Icon
                     icon={reactIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                    style={{ fontSize: "400%", margin: "5% 5% 0 5%" }}
                   />
                   <Icon
-                    icon={vueIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                    icon={cSharp}
+                    style={{ fontSize: "400%", margin: "5% 5% 0 5%" }}
                   />
                 </span>
               </div>
             </div>
-
             <div className="col-md-8 center">
               <div className="col-md-10">
                 <div className="card">
@@ -77,11 +79,26 @@ class About extends Component {
                     }}
                   >
                     <br />
-                    <span className="wave">{hello} :) </span>
+                    <span className="wave">{hello} </span>
                     <br />
                     <br />
                     {about}
                   </div>
+                </div>
+                <div className="polaroid">
+                  <span style={{ cursor: "auto" }}>
+                    <img
+                      src={profilepic2}
+                      alt="tennis"
+                    />
+                  </span>
+                  <span style={{ cursor: "auto" }} className="traveling">
+                    <img
+                      height="200px"
+                      src={profilepic3}
+                      alt="traveling"
+                    />
+                  </span>
                 </div>
               </div>
             </div>

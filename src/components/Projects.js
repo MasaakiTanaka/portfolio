@@ -25,16 +25,15 @@ class Projects extends Component {
             key={projects.title}
             style={{ cursor: "pointer" }}
           >
-            <span className="portfolio-item d-block">
+            <span className="projects-item d-block">
               <div className="foto" onClick={() => detailsModalShow(projects)}>
                 <div>
                   <img
                     src={projects.images[0]}
                     alt="projectImages"
                     height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
+                    style={{ marginBottom: 0, paddingBottom: 0, position: 'relative' }}
                   />
-                  <span className="project-date">{projects.startDate}</span>
                   <br />
                   <p className="project-title-settings mt-3">
                     {projects.title}
@@ -48,7 +47,7 @@ class Projects extends Component {
     }
 
     return (
-      <section id="portfolio">
+      <section id="projects">
         <div className="col-md-12">
           <h1 className="section-title" style={{ color: "black" }}>
             <span>{sectionName}</span>
