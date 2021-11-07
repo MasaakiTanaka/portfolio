@@ -38,8 +38,8 @@
       "title": "Twitter Clone",
       "description": "Personal project for study Node.js, Express, and MongoDB. User can keep their memories by uploading their comments. :)",
       "images": [
-        "images/portfolio/twitter-clone/memory_project1.jpg",
-        "images/portfolio/twitter-clone/memory_project2.jpg"
+        "images/portfolio/twitter-clone/memory-project1.jpg",
+        "images/portfolio/twitter-clone/memory-project2.jpg"
       ],
       "url": "https://github.com/MasaakiTanaka/mern",
       "technologies": [
@@ -69,7 +69,7 @@
       "title": "Werewolf Game Tool",
       "description": "Personal project for playing werewolf game online with my friends. This is a realtime web application using Socket.IO. I've learned a lot!",
       "images": [
-        "images/portfolio/werewolf/werewolf.jpg",
+        "images/portfolio/werewolf/werewolf1.jpg",
         "images/portfolio/werewolf/werewolf2.jpg"
       ],
       "url": "https://github.com/MasaakiTanaka/werewolf_game",
