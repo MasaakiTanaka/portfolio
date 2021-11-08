@@ -2,18 +2,7 @@
   "basic_info": {
     "name": "Masaaki Tanaka",
     "titles": ["Full Stack Software Developer"],
-    "social": [
-      {
-        "name": "github",
-        "url": "https://github.com",
-        "class": "fab fa-github"
-      },
-      {
-        "name": "instagram",
-        "url": "https://www.instagram.com",
-        "class": "fab fa-instagram"
-      }
-    ],
+    "social": [],
     "image1": "main_profile.jpg",
     "image2": "tennis_serve.jpg",
     "image3": "travel.jpg"
